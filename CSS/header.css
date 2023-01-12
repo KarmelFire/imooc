@@ -6,8 +6,8 @@
 }
 
 .nav-box {
-    min-width: 1366px;
     max-width: 1366px;
+    min-width: 1152px;
     margin: 0 auto;
 }
 

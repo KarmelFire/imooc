@@ -130,27 +130,27 @@
 
 
     // 鼠标悬浮到轮播大图，清除定时器
-    swiperA.onmouseenter = function () {
-        clearInterval(timer);
-    }
+    // swiperA.onmouseenter = function () {
+    //     clearInterval(timer);
+    // }
 
     // 鼠标离开，重新启动定时器
-    swiperA.onmouseenter = function () {
-        timer = setInterval(() => {
-            i = ++i == 4 ? 0 : i;
-            changeImg(i);
-        }, 3000);
-    }
+    //     swiperA.onmouseenter = function () {
+    //         timer = setInterval(() => {
+    //             i = ++i == 4 ? 0 : i;
+    //             changeImg(i);
+    //         }, 3000);
+    //     }
 
-    prevArrow.onmouseenter = function () {
-        clearInterval(timer);
-    }
+    //     prevArrow.onmouseenter = function () {
+    //         clearInterval(timer);
+    //     }
 
-    nextArrow.onmouseenter = function () {
-        clearInterval(timer);
-    }
+    //     nextArrow.onmouseenter = function () {
+    //         clearInterval(timer);
+    //     }
 
-    ul.onmouseenter = function () {
-        clearInterval(timer);
-    }
+    //     ul.onmouseenter = function () {
+    //         clearInterval(timer);
+    //     }
 }
