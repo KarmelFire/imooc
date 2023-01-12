@@ -59,16 +59,16 @@
 
     // 获取所有的切换圆点
     const ul = document.querySelector('.circle-list');
-    const list = document.querySelectorAll('circle-list li')
+    const list = document.querySelectorAll('.circle-list li')
 
     // 封装一个切换图片的函数
     function changeImg(index) {
         const obj = swiperImgList[index];
         swiperA.style.backgroundImage = `url(${obj.path})`;
         swiperA.href = obj.url;
-        banner.style.backgroundImage = `url(${obj.bj})`;
+        banner.style.backgroundImage = `url(${obj.bg})`;
         // 这条语句到圆点切换的时候再加，是然后圆点切换和主图切换同步
-        // currentCircle(index);
+        currentCircle(index);
     }
 
     // 初始化轮播，显示第一张图
@@ -106,51 +106,49 @@
         }, 1000);
     }
 
-    // 选中的圆点，对其进行函数封装
-    // function currentCircle(index) {
-    //     for (let i = 0; i < list.length; i++) {
-    //         list[i].className = '';
-    //         list[index].className = 'current';
-    //     }
-    // }
+    // 选中的圆点,对其进行函数封装
+    function currentCircle(index) {
+        for (let i = 0; i < list.length; i++) {
+            list[i].className = '';
+            list[index].className = 'current';
+        }
+    }
 
-    // 循环注册所有圆点的点击事件，也注意1秒内不能重复点击
-    // for (let i = 0; i < list.length; i++) {
-    //     list[i].onclick = function () {
-    //         if (flag == false) {
-    //             return;
-    //         }
-    //         flag = false;
-    //         changeImg(i);
-    //         setTimeout(() => {
-    //             flag = true;
-    //         }, 1000)
-    //     }
-    // }
+    // 循环注册所有圆点的点击事件, 也注意1s内不能重复点击
+    for (let i = 0; i < list.length; i++) {
+        list[i].onclick = function () {
+            if (flag == false) {
+                return;
+            }
+            flag = false;
+            changeImg(i);
+            setTimeout(() => {
+                flag = true;
+            }, 1000)
+        }
+    }
 
+    // 鼠标悬停到轮播大图, 清除定时器
+    swiperA.onmouseenter = function () {
+        clearInterval(timer);
+    }
+    // 鼠标离开,重新启动定时器
+    swiperA.onmouseenter = function () {
+        timer = setInterval(() => {
+            i = ++i == 4 ? 0 : i;
+            changeImg(i);
+        }, 3000)
+    }
 
-    // 鼠标悬浮到轮播大图，清除定时器
-    // swiperA.onmouseenter = function () {
-    //     clearInterval(timer);
-    // }
+    prevArrow.onmouseenter = function () {
+        clearInterval(timer);
+    }
 
-    // 鼠标离开，重新启动定时器
-    //     swiperA.onmouseenter = function () {
-    //         timer = setInterval(() => {
-    //             i = ++i == 4 ? 0 : i;
-    //             changeImg(i);
-    //         }, 3000);
-    //     }
+    nextArrow.onmouseenter = function () {
+        clearInterval(timer);
+    }
 
-    //     prevArrow.onmouseenter = function () {
-    //         clearInterval(timer);
-    //     }
-
-    //     nextArrow.onmouseenter = function () {
-    //         clearInterval(timer);
-    //     }
-
-    //     ul.onmouseenter = function () {
-    //         clearInterval(timer);
-    //     }
+    ul.onmouseenter = function () {
+        clearInterval(timer);
+    }
 }
