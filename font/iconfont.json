@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "20797374",
+      "name": "右三角",
+      "font_class": "yousanjiao1",
+      "unicode": "e6c8",
+      "unicode_decimal": 59080
+    },
+    {
+      "icon_id": "14830332",
+      "name": "shizhong1",
+      "font_class": "shizhong1",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
       "icon_id": "1049964",
       "name": "右三角",
       "font_class": "yousanjiao",
@@ -18,13 +32,6 @@
       "font_class": "shopping-cart-fill",
       "unicode": "e865",
       "unicode_decimal": 59493
-    },
-    {
-      "icon_id": "7206269",
-      "name": "Shopping cart",
-      "font_class": "Shoppingcart",
-      "unicode": "e64f",
-      "unicode_decimal": 58959
     },
     {
       "icon_id": "15838525",

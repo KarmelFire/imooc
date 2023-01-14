@@ -1,9 +1,8 @@
 @font-face {
-  font-family: "iconfont";
-  /* Project id 3861228 */
-  src: url('iconfont.woff2?t=1673540020987') format('woff2'),
-    url('iconfont.woff?t=1673540020987') format('woff'),
-    url('iconfont.ttf?t=1673540020987') format('truetype');
+  font-family: "iconfont"; /* Project id 3861228 */
+  src: url('iconfont.woff2?t=1673621159592') format('woff2'),
+       url('iconfont.woff?t=1673621159592') format('woff'),
+       url('iconfont.ttf?t=1673621159592') format('truetype');
 }
 
 .iconfont {
@@ -14,6 +13,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-yousanjiao1:before {
+  content: "\e6c8";
+}
+
+.icon-shizhong1:before {
+  content: "\e60f";
+}
+
 .icon-yousanjiao:before {
   content: "\e614";
 }
@@ -22,10 +29,7 @@
   content: "\e865";
 }
 
-.icon-Shoppingcart:before {
-  content: "\e64f";
-}
-
 .icon-search:before {
   content: "\e67d";
 }
+
