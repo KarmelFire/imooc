@@ -4,7 +4,7 @@
 }
 
 .new-course-box {
-    height: 634px;
+    height: 675px;
 }
 
 .new-course-box .title {
@@ -19,6 +19,10 @@
 /* 新上好课总体布局结束 */
 
 /* 标题栏 */
+.new-course-box .title {
+    padding: 10px;
+    font-size: 14px;
+}
 
 .new-course-box .title img {
     width: 140px;
@@ -36,7 +40,7 @@
     color: #ec1500;
 }
 
-.new-course-box .title .active {
+.new-course-box .title a.active {
     border-bottom: 2px solid #ec1500;
     padding-bottom: 5px;
     font-weight: 700;
@@ -49,7 +53,7 @@
 }
 
 /* 当前选中的类别，显示 */
-.new-course-box .new-course-list ul .current {
+.new-course-box .new-course-list ul.current {
     display: block;
 }
 
@@ -75,10 +79,17 @@
     border-radius: 8px 8px 0 0;
 }
 
+.new-course-box .new-course-list .new {
+    position: absolute;
+    width: 60px;
+    left: 210px;
+}
+
 .new-course-box .new-course-list .title {
     margin-left: 10px;
-    margin-top: 10px;
+    margin-top: 8px;
     color: #545C63;
+    padding-bottom: 3px;
 }
 
 .new-course-box .new-course-list .difficulty {
@@ -95,7 +106,41 @@
 }
 
 .bottom .discount {
-    background-color: rgba(242, 13, 13, .1);
+    padding: 1px 3px;
+    background-color: rgba(242, 13, 13, .6);
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.bottom .price {
+    padding: 2px 10px;
+    font-size: 12px;
+    color: rgba(242, 13, 13, .6);
+    font-weight: 700;
+}
+
+.bottom .free {
+    padding: 2px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #A6A6A6;
+}
+
+.bottom .origin-price {
+    padding: 2px 0;
+    font-size: 12px;
+    color: #6d7278;
+}
+
+.bottom .delete-line {
+    text-decoration: line-through;
+}
+
+.bottom .free {
+    font-size: 12px;
 }
 
 /* 课程列表结束 */
+
+/* 两侧广告 */

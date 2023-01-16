@@ -1,5 +1,4 @@
 // 定时器实现关键词切换
-
 {
     // 1. 获取搜索框的输入表单对象
     let input = document.querySelector(".search input");
@@ -227,5 +226,27 @@
             leftPx = --leftPx == -1920 ? 0 : leftPx;
             ul.style.left = leftPx + 'px';
         }, 10);
+    }
+}
+
+// 课程切换
+{
+    // 获取所有的 a 标签 （tab 栏）
+    const tabs = document.querySelectorAll('.new-course-box a');
+    // 获取到所有的课程列表
+    const uls = document.querySelectorAll('.new-course-list ul');
+
+    for (let i = 0; i < tabs.length; i++) {
+        // 循环为所有的 a 绑定点击事件
+        tabs[i].onclick = function () {
+            // 清除所有的 a 和 ul 的样式
+            for (let j = 0; j < tabs.length; j++) {
+                tabs[j].className = '';
+                uls[j].className = '';
+            }
+            // 给当前选中的 a 和 ul 添加样式
+            tabs[i].className = 'active';
+            uls[i].className = 'current';
+        }
     }
 }
