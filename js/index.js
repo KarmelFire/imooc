@@ -18,7 +18,7 @@
     }, 2000);
 }
 
-// 轮播
+// 轮播   // 图片预加载
 {
     // 定义轮播图数组
     const swiperImgList = [
@@ -44,6 +44,13 @@
         }
     ];
 
+    let imgs = [];
+
+    for (let index = 0; index < swiperImgList.length; index++) {
+        imgs[index] = new Image();
+        imgs[index].src = swiperImgList[index].path;
+    }
+
     // 找到swiper下的 a 标签
     const swiperA = document.querySelector('.swiper a');
     // 找到最外层的div
@@ -63,7 +70,7 @@
     // 封装一个切换图片的函数
     function changeImg(index) {
         const obj = swiperImgList[index];
-        swiperA.style.backgroundImage = `url(${obj.path})`;
+        swiperA.style.backgroundImage = `url(${imgs[index].src})`;
         swiperA.href = obj.url;
         banner.style.backgroundImage = `url(${obj.bg})`;
         // 这条语句到圆点切换的时候再加，是然后圆点切换和主图切换同步
@@ -152,6 +159,7 @@
     }
 }
 
+
 // 倒计时
 {
     // 获取结束时间点的时间戳
@@ -229,7 +237,7 @@
     }
 }
 
-// 课程切换
+// 课程切换（新上好课）
 {
     // 获取所有的 a 标签 （tab 栏）
     const tabs = document.querySelectorAll('.new-course-box a');
@@ -247,6 +255,50 @@
             // 给当前选中的 a 和 ul 添加样式
             tabs[i].className = 'active';
             uls[i].className = 'current';
+        }
+    }
+}
+
+// 课程切换(进站必学)
+{
+    // 获取所有的 a 标签 （tab 栏）
+    const tabs2 = document.querySelectorAll('.learn-box a');
+    // 获取到所有的课程列表
+    const uls2 = document.querySelectorAll('.learn-list ul');
+
+    for (let i = 0; i < tabs2.length; i++) {
+        // 循环为所有的 a 绑定点击事件
+        tabs2[i].onclick = function () {
+            // 清除所有的 a 和 ul 的样式
+            for (let j = 0; j < tabs2.length; j++) {
+                tabs2[j].className = '';
+                uls2[j].className = '';
+            }
+            // 给当前选中的 a 和 ul 添加样式
+            tabs2[i].className = 'active';
+            uls2[i].className = 'current';
+        }
+    }
+}
+
+// 课程切换(学习路线)
+{
+    // 获取所有的 a 标签 （tab 栏）
+    const tabs3 = document.querySelectorAll('.route-box a');
+    // 获取到所有的课程列表
+    const uls3 = document.querySelectorAll('.route-list ul');
+
+    for (let i = 0; i < tabs3.length; i++) {
+        // 循环为所有的 a 绑定点击事件
+        tabs3[i].onclick = function () {
+            // 清除所有的 a 和 ul 的样式
+            for (let j = 0; j < tabs3.length; j++) {
+                tabs3[j].className = '';
+                uls3[j].className = '';
+            }
+            // 给当前选中的 a 和 ul 添加样式
+            tabs3[i].className = 'active';
+            uls3[i].className = 'current';
         }
     }
 }

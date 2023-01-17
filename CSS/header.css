@@ -3,6 +3,7 @@
     width: 100%;
     height: 72px;
     border-bottom: 1px solid #ccc;
+    background-image: url(../images/header/慕课网-程序员的梦工厂_57a855b2.png);
 }
 
 .nav-box {
@@ -13,9 +14,9 @@
 
 /* logo */
 .nav-box h1 {
-    width: 126px;
+    width: 148px;
     height: 72px;
-    background-image: url(../images/logo.png);
+    background-image: url(../images/header/慕课网-程序员的梦工厂_a8643885.png);
     /* background-size: 126px 72px; */
     background-size: cover;
 }
@@ -33,6 +34,10 @@
     height: 72px;
     line-height: 72px;
     margin-left: 20px;
+}
+
+.item-box a {
+    color: white;
 }
 
 .item-box li {
@@ -83,6 +88,7 @@
 
 .login-area a {
     padding: 0 10px;
+    color: white;
 }
 
 .login-area .shop-cart {

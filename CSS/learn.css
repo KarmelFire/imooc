@@ -1,63 +1,63 @@
-/* 新上好课总体布局开始 */
-#course {
+/* 进站必学总体布局开始 */
+#learn {
     padding: 32px 0;
 }
 
-.new-course-box {
-    height: 695px;
+.learn-box {
+    height: 655px;
 }
 
-.new-course-box .title {
+.learn-box .title {
     height: 36px;
 }
 
-.new-course-box .new-course-list {
+.learn-box .learn-list {
     height: 568;
     /* background-color: rgb(211, 239, 249); */
 }
 
-/* 新上好课总体布局结束 */
+/* 进站必学整体布局结束 */
 
 /* 标题栏 */
-.new-course-box .title {
+.learn-box .title {
     padding: 10px;
     font-size: 14px;
 }
 
-.new-course-box .title img {
+.learn-box .title img {
     width: 140px;
     margin-bottom: -8px;
 }
 
-.new-course-box .title a {
+.learn-box .title a {
     padding: 0 10px;
     font-size: 14px;
     font-weight: 400;
     transition: .3s;
 }
 
-.new-course-box .title a:hover {
+.learn-box .title a:hover {
     color: #ec1500;
 }
 
-.new-course-box .title a.active {
+.learn-box .title a.active {
     border-bottom: 2px solid #ec1500;
     padding-bottom: 5px;
     font-weight: 700;
 }
 
 /* 课程列表开始 */
-.new-course-box .new-course-list ul {
+.learn-box .learn-list ul {
     display: none;
     width: 1176px;
 }
 
 /* 当前选中的类别，显示 */
-.new-course-box .new-course-list ul.current {
+.learn-box .learn-list ul.current {
     display: block;
 }
 
-.new-course-box .new-course-list ul li {
+.learn-box .learn-list ul li {
     position: relative;
     float: left;
     width: 270px;
@@ -68,38 +68,38 @@
     transition: all .2s;
 }
 
-.new-course-box .new-course-list ul li:hover {
+.learn-box .learn-list ul li:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .3);
     cursor: pointer;
 }
 
-.new-course-box .new-course-list ul li img {
+.learn-box .learn-list ul li img {
     width: 270px;
     border-radius: 8px 8px 0 0;
 }
 
-.new-course-box .new-course-list .new {
+.learn-box .learn-list .new {
     position: absolute;
     width: 60px;
     left: 210px;
 }
 
-.new-course-box .new-course-list .title {
+.learn-box .learn-list .title {
     margin-left: 10px;
     margin-top: 8px;
     color: #545C63;
     padding-bottom: 3px;
 }
 
-.new-course-box .new-course-list .difficulty {
+.learn-box .learn-list .difficulty {
     position: absolute;
     bottom: 40px;
     left: 10px;
     font-size: 12px;
 }
 
-.new-course-box .new-course-list .bottom {
+.learn-box .learn-list .bottom {
     position: absolute;
     bottom: 10px;
     left: 10px;
